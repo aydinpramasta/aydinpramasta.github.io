@@ -1,18 +1,159 @@
+:root {
+	--items-before: rgb(154, 154, 154);
+	--items-after: rgba(255, 255, 255, 0.775);
+	--bg-primary: #23232e;
+	--bg-secondary: #141418;
+	--transition-speed: 600ms;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Source Sans Pro", "Segoe UI" !important;
+	font-size: 16px !important;
+}
+
+body::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--items-before);
+}
+
+.navbar-style {
+	position: fixed;
+	background-color: var(--bg-primary);
+}
+
+.navbar-nav-style {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100%;
+}
+
+.nav-item-style {
+	width: 100%;
+}
+
+.nav-link-style {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	text-decoration: none;
+	transition: var(--transition-speed);
+}
+
+.nav-link-style:hover {
+	background: var(--bg-secondary);
+}
+
+.nav-link-style:hover .fa-primary {
+	color: var(--items-after);
+	transition: var(--transition-speed);
+}
+
+.fa-primary {
+	color: var(--items-before);
+	transition: var(--transition-speed);
+}
+
+.nav-link-style svg {
+	width: 2rem;
+	min-width: 2rem;
+	margin: 0 1.5rem;
+}
+
+main {
+	margin-left: 5rem;
+}
+
 .jumbotron {
-  padding-top: 10rem;
-  background-color: #e2edff;
+	padding-top: 3rem;
+	background-color: #e2edff;
 }
 
-#hobbies {
-  background-color: #e2edff;
+.about-anchor {
+	position: absolute;
+	top: 90%;
+	left: 50%;
 }
 
-section {
-  padding-top: 5rem;
+.hobbies {
+	background-color: #e2edff;
 }
 
-.col-md-6.tengah {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
+.hobbies-anchor {
+	position: absolute;
+	top: 185%;
+	left: 50%;
+}
+
+.contacts-anchor {
+	position: absolute;
+	top: 300%;
+	left: 50%;
+}
+
+footer {
+	background-color: #e2edff;
+}
+
+/* Small screens */
+@media only screen and (max-width: 300px) {
+	.nav-link-style svg {
+		width: 1.5rem;
+		min-width: 1.5rem;
+		margin: 0 1rem;
+	}
+
+	.img {
+		width: 250px !important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.navbar-style {
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+
+	.navbar-nav-style {
+		flex-direction: row;
+	}
+
+	.nav-link-style {
+		justify-content: center;
+	}
+
+	main {
+		margin: 0;
+		margin-bottom: 5rem;
+	}
+
+	.img {
+		width: 300px;
+	}
+}
+
+/* Large screens */
+@media only screen and (min-width: 601px) {
+	.navbar-style {
+		top: 0;
+		width: 5rem;
+		height: 100vh;
+	}
+	.img {
+		width: 300px;
+	}
 }

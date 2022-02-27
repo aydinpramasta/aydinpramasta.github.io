@@ -88,24 +88,14 @@ main {
 	left: 50%;
 }
 
-.hobbies {
+.contacts {
 	background-color: #e2edff;
-}
-
-.hobbies-anchor {
-	position: absolute;
-	top: 185%;
-	left: 50%;
 }
 
 .contacts-anchor {
 	position: absolute;
-	top: 300%;
+	top: 180%;
 	left: 50%;
-}
-
-footer {
-	background-color: #e2edff;
 }
 
 /* Small screens */
@@ -143,6 +133,14 @@ footer {
 
 	.img {
 		width: 300px;
+	}
+
+	.about-anchor {
+		top: 55%;
+	}
+
+	.contacts-anchor {
+		top: 125%;
 	}
 }
 
